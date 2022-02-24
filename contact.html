@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grow With Joy</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="./css/all.css">
+
+
+    <!-- --------- Owl-Carousel ------------------->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="./css/aos.css">
+
+    <!-- Custom Style   -->
+    <link rel="stylesheet" href="./css/Style.css">
+
+</head>
+
+<body>
+    <style>
+        * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyOTE0MDQxOQ&ixlib=rb-1.2.1&q=85');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: #292929;
+  min-width: 300px;
+  height: 120px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card i {
+  color: #d44444;
+  font-size: 2rem;
+  position: absolute;
+  transition: all 0.4s ease;
+}
+
+.card-title {
+  color: #d44444;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  transform: translate(0,-80px);
+  transition: all 0.4s ease;
+}
+
+.card-info {
+  color: #fff;
+  margin-top: 10px;
+  transform: translate(0, 80px);
+  transition: all 0.4s ease;
+}
+
+.card:hover i {
+  transform: scale(2);
+  opacity: 0;
+}
+
+.card:hover .card-title {
+  transform: translate(0, 0);
+}
+.card:hover .card-info {
+  transform: translate(0, 0);
+}
+
+
+@media screen and (max-width: 900px) {
+  .card {
+    flex: 100%; 
+    max-width: 500px;
+    margin-right: 50px;
+  }
+}
+
+ /* FORM CSS */
+
+
+h1 {
+    font-family: 'Poppins', sans-serif, 'arial';
+    font-weight: 600;
+    font-size: 72px;
+    color: white;
+    text-align: center;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif, 'arial';
+    font-weight: 400;
+    font-size: 20px;
+    color: #9b9b9b;
+    line-height: 1.5;
+}
+
+/* ///// inputs /////*/
+
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+    font-size: 0.75em;
+    color: #999;
+    top: -5px;
+    -webkit-transition: all 0.225s ease;
+    transition: all 0.225s ease;
+}
+
+.styled-input {
+    float: left;
+    width: 293px;
+    margin: 1rem 0;
+    position: relative;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px){
+    .styled-input {
+        width:100%;
+    }
+}
+
+.styled-input label {
+    color: #999;
+    padding: 1.3rem 30px 1rem 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+.styled-input.wide { 
+    width: 650px;
+    max-width: 100%;
+}
+
+input,
+textarea {
+    padding: 30px;
+    border: 0;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #2d2d2d;
+    color: white;
+    border-radius: 4px;
+}
+
+input:focus,
+textarea:focus { outline: 0; }
+
+input:focus ~ span,
+textarea:focus ~ span {
+    width: 100%;
+    -webkit-transition: all 0.075s ease;
+    transition: all 0.075s ease;
+}
+
+textarea {
+    width: 100%;
+    min-height: 15em;
+}
+
+.input-container {
+    width: 650px;
+    max-width: 100%;
+    margin: 20px auto 25px auto;
+}
+
+.submit-btn {
+    float: right;
+    padding: 7px 35px;
+    border-radius: 60px;
+    display: inline-block;
+    background-color: #4b8cfb;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.06),
+              0 2px 10px 0 rgba(0,0,0,0.07);
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(1px);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10),
+              0 1px 1px 0 rgba(0,0,0,0.09);
+}
+
+@media (max-width: 768px) {
+    .contact_title{
+        height: 100%;
+    }
+    .submit-btn {
+        width:70%;
+        float: none;
+        text-align:center;
+        margin-bottom: 20px;
+    }
+}
+
+input[type=checkbox] + label {
+  color: #ccc;
+  font-style: italic;
+} 
+
+input[type=checkbox]:checked + label {
+  color: #f00;
+  font-style: normal;
+}
+
+    </style>
+
+    <!-- ----------------------------  Navigation ---------------------------------------------- -->
+
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="#" class="text-gray">Grow With Joy</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a href="Index.html">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="achivement.html">Achievement  </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="carrier.html">Carrer Options</a>
+                    </li>
+                    
+                    <li class="nav-link">
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ------------x---------------  Navigation --------------------------x------------------- -->
+
+    <!----------------------------- Main Site Section ------------------------------>
+
+    <main>
+
+        <!------------------------ Site Title ---------------------->
+
+        <section class="contact_title" >
+            <h1 class="contact_heading" >For more information Please feel free to contact Us</h1>
+            <div class="container">
+                <div class="card">
+                  <i class="fas fa-envelope"></i>
+                  <h2 class="card-title">Email</h2>
+                  <p class="card-info">joykumarsingha@rediffmail.com</p>
+                </div>
+                <div class="card">
+                  <i class="fas fa-phone"></i>
+                  <h2 class="card-title">Phone number</h2>
+                  <p class="card-info">+91 8136058410</p>
+                </div>
+                <div class="card">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <h2 class="card-title">Location</h2>
+                  <p class="card-info">Astha complex, Opp.Govt Press,<br/> Near Petrol pump,Chandmari.<br/> Guwahati</p>
+                </div>
+              </div>
+              <div class="contain">
+                <div class="row">
+                        <h1>Write us</h1>
+                </div>
+                <div class="row">
+                        <h4 style="text-align:center">We'd love to hear from you!</h4>
+                </div>
+                <div class="row input-container">
+                        <div class="col-xs-12">
+                            <div class="styled-input wide">
+                                <input type="text" required />
+                                <label>Name</label> 
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="styled-input">
+                                <input type="text" required />
+                                <label>Email</label> 
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="styled-input" style="float:right;">
+                                <input type="text" required />
+                                <label>Phone Number</label> 
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="styled-input wide">
+                                <textarea required></textarea>
+                                <label>Message</label>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="btn-lrg submit-btn">Send Message</div>
+                        </div>
+                </div>
+            </div>
+           
+     
+           
+        </section>
+        <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6199.849307838364!2d91.81198625638929!3d26.147646609698068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a58eaa61cf729%3A0x78e41517366f3183!2sSanjivani%20Path%2C%20Borbari%2C%20Guwahati%2C%20Assam!5e0!3m2!1sen!2sin!4v1645684661061!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <!------------x----------- Site Title ----------x----------->
+
+        <!-- --------------------- Blog Carousel ----------------- -->
+
+        <section>
+           
+        </section>
+
+        <!-- ----------x---------- Blog Carousel --------x-------- -->
+
+        <!-- ---------------------- Site Content -------------------------->
+
+        <section class="container">
+          
+        </section>
+
+        <!-- -----------x---------- Site Content -------------x------------>
+
+    </main>
+
+    <!---------------x------------- Main Site Section ---------------x-------------->
+
+
+    <!-- --------------------------- Footer ---------------------------------------- -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                <h2>About us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quia atque nemo ad modi officiis
+                    iure, autem nulla tenetur repellendus.</p>
+            </div>
+            <div class="newsletter" data-aos="fade-right" data-aos-delay="200">
+                <h2>Newsletter</h2>
+                <p>Stay update with our latest</p>
+                <div class="form-element">
+                    <input type="text" placeholder="Email"><span><i class="fas fa-chevron-right"></i></span>
+                </div>
+            </div>
+            <div class="instagram" data-aos="fade-left" data-aos-delay="200">
+                <h2>Instagram</h2>
+                <div class="flex-row">
+                    <img src="./assets/instagram/thumb-card3.png" alt="insta1">
+                    <img src="./assets/instagram/thumb-card4.png" alt="insta2">
+                    <img src="./assets/instagram/thumb-card5.png" alt="insta3">
+                </div>
+                <div class="flex-row">
+                    <img src="./assets/instagram/thumb-card6.png" alt="insta4">
+                    <img src="./assets/instagram/thumb-card7.png" alt="insta5">
+                    <img src="./assets/instagram/thumb-card8.png" alt="insta6">
+                </div>
+            </div>
+            <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                <h2>Follow us</h2>
+                <p>Let us be Social</p>
+                <div>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="rights flex-row">
+            <h4 class="text-gray">
+                Copyright ©2022 All rights reserved | 
+                <a href="" >Grow With Joy 
+                  </a>
+            </h4>
+        </div>
+        <div class="move-up">
+            <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+        </div>
+    </footer>
+
+    <!-- -------------x------------- Footer --------------------x------------------- -->
+
+    <!-- Jquery Library file -->
+    <script src="./js/Jquery3.4.1.min.js"></script>
+
+    <!-- --------- Owl-Carousel js ------------------->
+    <script src="./js/owl.carousel.min.js"></script>
+
+    <!-- ------------ AOS js Library  ------------------------- -->
+    <script src="./js/aos.js"></script>
+
+    <!-- Custom Javascript file -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

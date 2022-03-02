@@ -24,7 +24,59 @@
 </head>
 
 <body>
-    <style>
+   <style>
+        * {
+  box-sizing: border-box;
+  margin: 0;
+ 
+}
+        h1 {
+  font-family: arial;
+  font-size: 1.5em;
+  text-align: center;
+
+  padding: 20px;
+  background-color: #1d2d50;
+  color: #fcdab7;
+  overflow: hidden;
+}
+
+#flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  vertical-align: middle;
+  margin-top: 8px;
+  filter: grayscale(70%);
+}
+
+.column:nth-child(even) {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
 
     </style>
 
@@ -80,16 +132,46 @@
 
         <!------------------------ Site Title ---------------------->
 
-        <section class="gallery_head" >
-            <header>
-                <div class="content">
-                    <h3>UNDER CONSTRUCTION</h3>
-                  <h1>GROW<span> WITH </span>JOY</h1>
-                  <h2>COMING SOON</h2>
-                  <div class="countdown">00 : 00 : 00 : 00</div>
+        <section  >
+         
+            <h1>My Bali Tour</h1>
+                <div id="flexbox">
+                  <div class="column">
+                  <img src="assets\gallery\bali1.jpeg" alt="Image" width="100%" />
+                  <img src="assets\gallery\bali2.jpeg" alt="Image" width="100%" />
+                  <img src="assets\gallery\bali3.jpeg" alt="Image" width="100%" />
+                  <img src="assets\gallery\bali14.jpeg" alt="Image" width="100%" />
+                  
+                  
+                  </div>
+                  <div class="column">
+                  <img src="assets\gallery\bali12.jpeg" alt="Image" width="100%" />
+                  <img src="assets\gallery\bali13.jpeg" alt="Image" width="100%" />
+                  <img src="assets\gallery\bali11.jpeg" alt="Image" width="100%" />
+                  <img src="assets\gallery\bali15.jpeg" alt="Image" width="100%" />
+                  <img src="assets\gallery\bali19.jpeg" alt="Image" width="100%" />
+                  
+                  </div>
+                  <div class="column">
+                    <img src="assets\gallery\bali7.jpeg" alt="Image" width="100%" />
+                    <img src="assets\gallery\bali8.jpeg" alt="Image" width="100%" />
+                    <img src="assets\gallery\bali9.jpeg" alt="Image" width="100%" />
+                    <img src="assets\gallery\bali10.jpeg" alt="Image" width="100%" />
+                    <img src="assets\gallery\bali18.jpeg" alt="Image" width="100%" />
+                   
+                
+                  </div>
+                  <div class="column">
+                    <img src="assets\gallery\bali4.jpeg" alt="Image" width="100%" />
+                    <img src="assets\gallery\bali5.jpeg" alt="Image" width="100%" />
+                    <img src="assets\gallery\bali6.jpeg" alt="Image" width="100%" />
+                    <img src="assets\gallery\bali16.jpeg" alt="Image" width="100%" />
+                    <img src="assets\gallery\bali17.jpeg" alt="Image" width="100%" />
+                      
+                  
+                  </div>     
                 </div>
-              </header>
-              <script src="main.js"></script>
+              
 
        
            
@@ -102,6 +184,7 @@
         <section class="container">
           
         </section>
+
 
         <!-- -----------x---------- Site Content -------------x------------>
 
